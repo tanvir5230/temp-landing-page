@@ -1,58 +1,57 @@
+:root {
+  --header-height: 92px;
+  --footer-height: 68px;
+  --primary-bg-color: #023672;
+  --main-section-padding-top: 40px;
+  --main-section-padding-bottom: 40px;
+  --main-section-padding-top-lg: 100px;
+  --main-section-padding-bottom-lg: 100px;
+  --card-padding-top: 50px;
+  --card-padding-bottom: 50px;
+  --card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --card-hover-border-color: orange;
+  --card-hover-border-width: 5px;
+  --transition-duration: 0.1s;
+}
+
+/* Header */
 .header {
-  height: 92px;
-  background-color: #023672;
+  height: var(--header-height);
+  background-color: var(--primary-bg-color);
 }
 
 /* Main Section */
 .main-section {
-  min-height: calc(100vh - 92px - 68px);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  padding-top: var(--main-section-padding-top);
+  padding-bottom: var(--main-section-padding-bottom);
 }
 
 @media (min-width: 768px) {
   .main-section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: var(--main-section-padding-top-lg);
+    padding-bottom: var(--main-section-padding-bottom-lg);
   }
 }
 
+/* Card */
+.site-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--card-padding-top);
+  padding-bottom: var(--card-padding-bottom);
+  box-shadow: var(--card-box-shadow);
+}
 
-.service-categories{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
-  padding-top: 3em;
-  padding-bottom: 3em;
-  background: #3d6277;
-  background-size: cover;
-}
-.service-categories .card{
-  transition: all 0.2s;
-}
-.service-categories .card-title{
-  padding-top: 0.5em;
-}
-.service-categories a:hover{
-  text-decoration: none;
-}
-.service-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.service-card:hover{
-  transition-duration: 0.1s;
-  border-right: 5px solid orange;
-  border-left: 5px solid orange;
+.site-card:hover {
+  transition-duration: var(--transition-duration);
+  border-right: var(--card-hover-border-width) solid var(--card-hover-border-color);
+  border-left: var(--card-hover-border-width) solid var(--card-hover-border-color);
 }
 
 /* Footer */
 .footer {
-  height: 68px;
-  background-color: #023672;
+  height: var(--footer-height);
+  background-color: var(--primary-bg-color);
 }
