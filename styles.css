@@ -1,18 +1,18 @@
 .header {
-  height: 112px;
+  height: 92px;
 }
 
 /* Main Section */
 .main-section {
-  min-height: calc(100vh - 112px - 72px);
+  min-height: calc(100vh - 92px - 68px);
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
 @media (min-width: 768px) {
   .main-section {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 
@@ -52,5 +52,5 @@
 
 /* Footer */
 .footer {
-  height: 72px;
+  height: 68px;
 }
